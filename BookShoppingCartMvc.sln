@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookShoppingCartMvcUI", "BookShoppingCartMvcUI\BookShoppingCartMvcUI.csproj", "{B8E97344-C74F-4A54-B00E-A2F89F2AF6DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8E97344-C74F-4A54-B00E-A2F89F2AF6DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8E97344-C74F-4A54-B00E-A2F89F2AF6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8E97344-C74F-4A54-B00E-A2F89F2AF6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8E97344-C74F-4A54-B00E-A2F89F2AF6DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {888C8987-3907-4431-B0BA-8CCBFF9B474E}
+	EndGlobalSection
+EndGlobal
