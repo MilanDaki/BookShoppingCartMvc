@@ -18,6 +18,8 @@ builder.Services
     .AddDefaultTokenProviders();
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IHomeRepository, HomeRepository>();
+builder.Services.AddTransient<ICartRepository, CartRepository>();
+builder.Services.AddTransient<IUserOrderRespository, UserOrderRepository>();
 
 var app = builder.Build();
 

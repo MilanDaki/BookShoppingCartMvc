@@ -3,14 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>E Book Store </title>
+    <title>E Book Store</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Option 1: Include in HTML -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">EBook Store</a>
@@ -22,7 +19,6 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Left side menu -->
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/Home/Index">Index</a>
@@ -32,7 +28,6 @@
                     </li>
                 </ul>
 
-                <!-- Right side login/register partial -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <partial name="_LoginPartial" />
@@ -46,8 +41,25 @@
         @RenderBody()
     </div>
 
+    <script>
+        loadCartCount();
+        async function loadCartCount() {
+            try {
+                var response = await fetch(`/Cart/GetTotalItemInCart`);
+                if (response.status === 200) {
+                    var result = await response.json();
+                    var cartCountEl = document.getElementById("cartCount");
+                    if (cartCountEl) {
+                        cartCountEl.innerHTML = result;
+                    }
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        }
+    </script>
+
+    @RenderSection("Scripts", required: false)
+
 </body>
 </html>
-
-    @await RenderSectionAsync("Scripts", required: false)
-
